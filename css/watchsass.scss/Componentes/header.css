@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /*box-sizing------>toma el borde relleno y ancho de la pagina*/
+  box-sizing: border-box;
+}
+
+/* barra de navegacion-----> configuracion  */
+nav {
+  background: #FBF7F0;
+  /* alto de la barra de navegacion */
+  height: 80px;
+  width: 100%;
+}
+
+.enlace {
+  position: absolute;
+  padding: 20px 50px;
+}
+
+.logo {
+  position: absolute;
+  width: 90px;
+  top: 5px;
+  height: 70px;
+  left: -15px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 25px;
+}
+
+nav ul li {
+  /* ponemos el menu en bloques */
+  display: inline-block;
+  /* nterlineado */
+  line-height: 80px;
+  /*margen para separar el menu  */
+  margin: 0px 8px;
+}
+
+/* configuracion del sector de inicio */
+nav a .active {
+  background: #555555;
+  transition: 0.5s;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+/*hover*/
+nav.active, li a:hover {
+  background: #555555;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 20px;
+  color: #555555;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}/*# sourceMappingURL=header.css.map */

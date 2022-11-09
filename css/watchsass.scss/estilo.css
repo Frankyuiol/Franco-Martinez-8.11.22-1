@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/*Elementos genericos*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /*box-sizing------>toma el borde relleno y ancho de la pagina*/
+  box-sizing: border-box;
+}
+
+/* barra de navegacion-----> configuracion  */
+nav {
+  background: #FBF7F0;
+  /* alto de la barra de navegacion */
+  height: 80px;
+  width: 100%;
+}
+
+.enlace {
+  position: absolute;
+  padding: 20px 50px;
+}
+
+.logo {
+  position: absolute;
+  width: 90px;
+  top: 5px;
+  height: 70px;
+  left: -15px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 25px;
+}
+
+nav ul li {
+  /* ponemos el menu en bloques */
+  display: inline-block;
+  /* nterlineado */
+  line-height: 80px;
+  /*margen para separar el menu  */
+  margin: 0px 8px;
+}
+
+/* configuracion del sector de inicio */
+nav a .active {
+  background: #555555;
+  transition: 0.5s;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+/*hover*/
+nav.active, li a:hover {
+  background: #555555;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 20px;
+  color: #555555;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.carousel-inner {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  /* 1vh ----> aproximado 7,98px */
+}
+
+/*index*/
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: justify;
+}
+
+.imagen {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/*agregamos los Media/ Responsive*/
+@media (max-width: 950px) {
+  /* realizamos el responsive cuando la pantalla
+  alcance el tamaño indicado en el media query
+  recordar acomodar  */
+  .enlace {
+    padding-left: 20px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #3C4048;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 2;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0px;
+    line-height: 30px;
+    position: relative;
+  }
+  li a:hover, li a.active {
+    background-color: none;
+    color: #555555;
+    position: relative;
+  }
+  #check:checked ~ ul {
+    left: 0;
+    /* indicamos la prioridad del elemento */
+    z-index: 2;
+  }
+  .carousel-inner {
+    z-index: 1;
+  }
+  .imagen {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    height: 90%;
+  }
+}/*# sourceMappingURL=estilo.css.map */
